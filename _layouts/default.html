@@ -35,15 +35,42 @@
         RIA BAHADUR
       </a>
 
-      <nav class="site-nav" aria-label="Primary navigation">
-        <a href="{{ '/about/' | relative_url }}">About</a>
-        <a href="{{ '/work/' | relative_url }}">Work</a>
-        <a href="{{ '/research/' | relative_url }}">Research</a>
-        <a href="{{ '/policy/' | relative_url }}">Policy</a>
-        <a href="{{ '/education/' | relative_url }}">Education</a>
-        <a href="{{ '/writing/' | relative_url }}">Writing</a>
-        <a href="{{ '/media/' | relative_url }}">Media</a>
-      </nav>
+      <!-- Desktop navigation -->
+<nav class="site-nav site-nav--desktop" aria-label="Primary navigation">
+  <a href="{{ '/about/' | relative_url }}">About</a>
+  <a href="{{ '/work/' | relative_url }}">Work</a>
+  <a href="{{ '/research/' | relative_url }}">Research</a>
+  <a href="{{ '/policy/' | relative_url }}">Policy</a>
+  <a href="{{ '/education/' | relative_url }}">Education</a>
+  <a href="{{ '/writing/' | relative_url }}">Writing</a>
+  <a href="{{ '/media/' | relative_url }}">Media</a>
+</nav>
+
+<!-- Mobile navigation -->
+<details class="mobile-nav">
+  <summary class="mobile-nav__toggle">
+    Menu
+  </summary>
+
+  <nav class="mobile-nav__panel" aria-label="Mobile navigation">
+    <a href="{{ '/about/' | relative_url }}">About</a>
+    <a href="{{ '/work/' | relative_url }}">Work</a>
+    <a href="{{ '/research/' | relative_url }}">Research</a>
+    <a href="{{ '/policy/' | relative_url }}">Policy</a>
+    <a href="{{ '/education/' | relative_url }}">Education</a>
+    <a href="{{ '/projects/' | relative_url }}">Projects</a>
+    <a href="{{ '/writing/' | relative_url }}">Writing</a>
+    <a href="{{ '/speaking/' | relative_url }}">Speaking</a>
+    <a href="{{ '/media/' | relative_url }}">Media</a>
+
+    <div class="mobile-nav__secondary">
+      <a href="{{ '/press/' | relative_url }}">Press</a>
+      <a href="{{ '/archive/' | relative_url }}">Archive</a>
+      <a href="{{ '/timeline/' | relative_url }}">Timeline</a>
+      <a href="{{ '/contact/' | relative_url }}">Contact</a>
+    </div>
+  </nav>
+</details>
 
     </div>
   </header>
