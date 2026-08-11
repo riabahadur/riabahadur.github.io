@@ -28,88 +28,220 @@
 
 <body>
 
+  <!-- =====================================================
+       SITE HEADER
+       ===================================================== -->
+
   <header class="site-header">
+
     <div class="site-header__inner">
 
       <a class="site-logo" href="{{ '/' | relative_url }}">
         RIA BAHADUR
       </a>
 
-      <!-- Desktop navigation -->
-<nav class="site-nav site-nav--desktop" aria-label="Primary navigation">
-  <a href="{{ '/about/' | relative_url }}">About</a>
-  <a href="{{ '/work/' | relative_url }}">Work</a>
-  <a href="{{ '/research/' | relative_url }}">Research</a>
-  <a href="{{ '/policy/' | relative_url }}">Policy</a>
-  <a href="{{ '/education/' | relative_url }}">Education</a>
-  <a href="{{ '/writing/' | relative_url }}">Writing</a>
-  <a href="{{ '/media/' | relative_url }}">Media</a>
-</nav>
 
-<!-- Mobile navigation -->
-<details class="mobile-nav">
-  <summary class="mobile-nav__toggle">
-    Menu
-  </summary>
+      <!-- DESKTOP NAVIGATION -->
 
-  <nav class="mobile-nav__panel" aria-label="Mobile navigation">
-    <a href="{{ '/about/' | relative_url }}">About</a>
-    <a href="{{ '/work/' | relative_url }}">Work</a>
-    <a href="{{ '/research/' | relative_url }}">Research</a>
-    <a href="{{ '/policy/' | relative_url }}">Policy</a>
-    <a href="{{ '/education/' | relative_url }}">Education</a>
-    <a href="{{ '/projects/' | relative_url }}">Projects</a>
-    <a href="{{ '/writing/' | relative_url }}">Writing</a>
-    <a href="{{ '/speaking/' | relative_url }}">Speaking</a>
-    <a href="{{ '/media/' | relative_url }}">Media</a>
+      <nav class="desktop-nav" aria-label="Primary navigation">
 
-    <div class="mobile-nav__secondary">
-      <a href="{{ '/press/' | relative_url }}">Press</a>
-      <a href="{{ '/archive/' | relative_url }}">Archive</a>
-      <a href="{{ '/timeline/' | relative_url }}">Timeline</a>
-      <a href="{{ '/contact/' | relative_url }}">Contact</a>
-    </div>
-  </nav>
-</details>
+        <a href="{{ '/about/' | relative_url }}">About</a>
+
+        <a href="{{ '/work/' | relative_url }}">Work</a>
+
+        <a href="{{ '/research/' | relative_url }}">Research</a>
+
+        <a href="{{ '/policy/' | relative_url }}">Policy</a>
+
+        <a href="{{ '/education/' | relative_url }}">Education</a>
+
+        <a href="{{ '/writing/' | relative_url }}">Writing</a>
+
+        <a href="{{ '/media/' | relative_url }}">Media</a>
+
+      </nav>
+
+
+      <!-- MOBILE MENU BUTTON -->
+
+      <button
+        class="mobile-menu-button"
+        id="mobileMenuButton"
+        type="button"
+        aria-expanded="false"
+        aria-controls="mobileMenu"
+      >
+        <span>Menu</span>
+        <span class="mobile-menu-button__symbol" aria-hidden="true">+</span>
+      </button>
 
     </div>
+
+
+    <!-- MOBILE NAVIGATION PANEL -->
+
+    <div
+      class="mobile-menu"
+      id="mobileMenu"
+      aria-hidden="true"
+    >
+
+      <div class="mobile-menu__inner">
+
+        <nav
+          class="mobile-menu__primary"
+          aria-label="Mobile navigation"
+        >
+
+          <a href="{{ '/about/' | relative_url }}">
+            About
+          </a>
+
+          <a href="{{ '/work/' | relative_url }}">
+            Work
+          </a>
+
+          <a href="{{ '/research/' | relative_url }}">
+            Research
+          </a>
+
+          <a href="{{ '/policy/' | relative_url }}">
+            Policy
+          </a>
+
+          <a href="{{ '/education/' | relative_url }}">
+            Education
+          </a>
+
+          <a href="{{ '/projects/' | relative_url }}">
+            Projects
+          </a>
+
+          <a href="{{ '/writing/' | relative_url }}">
+            Writing
+          </a>
+
+          <a href="{{ '/speaking/' | relative_url }}">
+            Speaking
+          </a>
+
+          <a href="{{ '/media/' | relative_url }}">
+            Media
+          </a>
+
+        </nav>
+
+
+        <nav
+          class="mobile-menu__secondary"
+          aria-label="Secondary mobile navigation"
+        >
+
+          <a href="{{ '/press/' | relative_url }}">
+            Press
+          </a>
+
+          <a href="{{ '/archive/' | relative_url }}">
+            Archive
+          </a>
+
+          <a href="{{ '/timeline/' | relative_url }}">
+            Timeline
+          </a>
+
+          <a href="{{ '/tinker/' | relative_url }}">
+            Tinker With Me
+          </a>
+
+          <a href="{{ '/contact/' | relative_url }}">
+            Contact
+          </a>
+
+        </nav>
+
+      </div>
+
+    </div>
+
   </header>
+
+
+  <!-- =====================================================
+       PAGE CONTENT
+       ===================================================== -->
 
   <main>
     {{ content }}
   </main>
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
 
   <footer class="site-footer">
 
     <div class="site-footer__main">
 
       <div>
-        <div class="site-footer__name">Ria Bahadur</div>
+
+        <div class="site-footer__name">
+          Ria Bahadur
+        </div>
+
         <p>
           Research, policy, education, and projects at the intersection
           of science, security, law, technology, and public institutions.
         </p>
+
       </div>
 
+
       <div class="site-footer__links">
-        <a href="{{ '/archive/' | relative_url }}">Archive</a>
-        <a href="{{ '/press/' | relative_url }}">Press</a>
-        <a href="{{ '/timeline/' | relative_url }}">Timeline</a>
-        <a href="{{ '/tinker/' | relative_url }}">Tinker With Me</a>
-        <a href="{{ '/contact/' | relative_url }}">Contact</a>
+
+        <a href="{{ '/archive/' | relative_url }}">
+          Archive
+        </a>
+
+        <a href="{{ '/press/' | relative_url }}">
+          Press
+        </a>
+
+        <a href="{{ '/timeline/' | relative_url }}">
+          Timeline
+        </a>
+
+        <a href="{{ '/tinker/' | relative_url }}">
+          Tinker With Me
+        </a>
+
+        <a href="{{ '/contact/' | relative_url }}">
+          Contact
+        </a>
+
       </div>
 
     </div>
 
+
     <div class="site-footer__bottom">
-      <span>&copy; {{ 'now' | date: "%Y" }} Ria Bahadur</span>
+
+      <span>
+        &copy; {{ 'now' | date: "%Y" }} Ria Bahadur
+      </span>
 
       <div>
-        <a href="https://github.com/riabahadur">GitHub</a>
+        <a href="https://github.com/riabahadur">
+          GitHub
+        </a>
       </div>
+
     </div>
 
   </footer>
+
+
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 
 </body>
 </html>
