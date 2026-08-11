@@ -1,0 +1,17 @@
+title: "Ria Bahadur"
+description: "Researcher, legislative author, and founder working across science, security, law, technology, and public institutions."
+
+url: "https://riabahadur.github.io"
+baseurl: ""
+
+author:
+  name: "Ria Bahadur"
+
+lang: "en-US"
+
+markdown: kramdown
+
+permalink: pretty
+
+exclude:
+  - README.md
