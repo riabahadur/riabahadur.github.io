@@ -266,6 +266,7 @@ p {
 
 .section-heading-wide {
   max-width: 1000px;
+
   margin-bottom: 3.5rem;
 }
 
@@ -369,12 +370,15 @@ p {
 
   top: 0;
 
-  background: rgba(248, 247, 243, 0.96);
+  background: rgba(248, 247, 243, 0.985);
 
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid rgba(16, 24, 39, 0.12);
 
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  box-shadow:
+    0 7px 20px rgba(16, 24, 39, 0.035);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
 }
 
 
@@ -1339,7 +1343,9 @@ p {
 
 
   .section-heading-wide {
-    margin-bottom: 2.5rem;
+    margin-bottom: 2.35rem;
+
+    line-height: 1.1;
   }
 
 
@@ -1389,7 +1395,9 @@ p {
 
 
   h2 {
-    font-size: clamp(2.2rem, 11vw, 3.7rem);
+    font-size: clamp(2rem, 9.5vw, 3.2rem);
+
+    line-height: 1.1;
   }
 
 
@@ -1485,9 +1493,9 @@ p {
 
 
   .pull-quote {
-    font-size: clamp(2rem, 9.5vw, 3.2rem);
+    font-size: clamp(1.85rem, 8vw, 2.75rem);
 
-    line-height: 1.16;
+    line-height: 1.18;
   }
 
 
