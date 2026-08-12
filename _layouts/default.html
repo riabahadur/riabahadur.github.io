@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: 'en-US' }}">
+
 <head>
+
   <meta charset="UTF-8">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  >
 
   <title>
     {% if page.title %}
@@ -18,46 +23,72 @@
     content="{{ page.description | default: site.description | escape }}"
   >
 
-  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <link
+    rel="canonical"
+    href="{{ page.url | absolute_url }}"
+  >
 
   <link
     rel="stylesheet"
     href="{{ '/assets/css/main.css' | relative_url }}"
   >
+
 </head>
+
 
 <body>
 
+
   <!-- =====================================================
-       SITE HEADER
+       HEADER
        ===================================================== -->
 
   <header class="site-header">
 
     <div class="site-header__inner">
 
-      <a class="site-logo" href="{{ '/' | relative_url }}">
+      <a
+        class="site-logo"
+        href="{{ '/' | relative_url }}"
+      >
         RIA BAHADUR
       </a>
 
 
       <!-- DESKTOP NAVIGATION -->
 
-      <nav class="desktop-nav" aria-label="Primary navigation">
+      <nav
+        class="desktop-nav"
+        aria-label="Primary navigation"
+      >
 
-        <a href="{{ '/about/' | relative_url }}">About</a>
+        <a href="{{ '/about/' | relative_url }}">
+          About
+        </a>
 
-        <a href="{{ '/work/' | relative_url }}">Work</a>
+        <a href="{{ '/work/' | relative_url }}">
+          Work
+        </a>
 
-        <a href="{{ '/research/' | relative_url }}">Research</a>
+        <a href="{{ '/research/' | relative_url }}">
+          Research
+        </a>
 
-        <a href="{{ '/policy/' | relative_url }}">Policy</a>
+        <a href="{{ '/policy/' | relative_url }}">
+          Policy
+        </a>
 
-        <a href="{{ '/education/' | relative_url }}">Education</a>
+        <a href="{{ '/education/' | relative_url }}">
+          Education
+        </a>
 
-        <a href="{{ '/writing/' | relative_url }}">Writing</a>
+        <a href="{{ '/writing/' | relative_url }}">
+          Writing
+        </a>
 
-        <a href="{{ '/media/' | relative_url }}">Media</a>
+        <a href="{{ '/media/' | relative_url }}">
+          Media
+        </a>
 
       </nav>
 
@@ -71,99 +102,115 @@
         aria-expanded="false"
         aria-controls="mobileMenu"
       >
-        <span>Menu</span>
-        <span class="mobile-menu-button__symbol" aria-hidden="true">+</span>
+
+        <span>
+          Menu
+        </span>
+
+        <span
+          class="mobile-menu-button__symbol"
+          aria-hidden="true"
+        >
+          +
+        </span>
+
       </button>
 
     </div>
 
-
-    <!-- MOBILE NAVIGATION PANEL -->
-
-    <div
-      class="mobile-menu"
-      id="mobileMenu"
-      aria-hidden="true"
-    >
-
-      <div class="mobile-menu__inner">
-
-        <nav
-          class="mobile-menu__primary"
-          aria-label="Mobile navigation"
-        >
-
-          <a href="{{ '/about/' | relative_url }}">
-            About
-          </a>
-
-          <a href="{{ '/work/' | relative_url }}">
-            Work
-          </a>
-
-          <a href="{{ '/research/' | relative_url }}">
-            Research
-          </a>
-
-          <a href="{{ '/policy/' | relative_url }}">
-            Policy
-          </a>
-
-          <a href="{{ '/education/' | relative_url }}">
-            Education
-          </a>
-
-          <a href="{{ '/projects/' | relative_url }}">
-            Projects
-          </a>
-
-          <a href="{{ '/writing/' | relative_url }}">
-            Writing
-          </a>
-
-          <a href="{{ '/speaking/' | relative_url }}">
-            Speaking
-          </a>
-
-          <a href="{{ '/media/' | relative_url }}">
-            Media
-          </a>
-
-        </nav>
+  </header>
 
 
-        <nav
-          class="mobile-menu__secondary"
-          aria-label="Secondary mobile navigation"
-        >
+  <!-- =====================================================
+       MOBILE MENU
+       IMPORTANT:
+       This sits OUTSIDE the sticky header for iOS Safari.
+       ===================================================== -->
 
-          <a href="{{ '/press/' | relative_url }}">
-            Press
-          </a>
+  <aside
+    class="mobile-menu"
+    id="mobileMenu"
+    aria-hidden="true"
+  >
 
-          <a href="{{ '/archive/' | relative_url }}">
-            Archive
-          </a>
+    <div class="mobile-menu__inner">
 
-          <a href="{{ '/timeline/' | relative_url }}">
-            Timeline
-          </a>
 
-          <a href="{{ '/tinker/' | relative_url }}">
-            Tinker With Me
-          </a>
+      <nav
+        class="mobile-menu__primary"
+        aria-label="Mobile navigation"
+      >
 
-          <a href="{{ '/contact/' | relative_url }}">
-            Contact
-          </a>
+        <a href="{{ '/about/' | relative_url }}">
+          About
+        </a>
 
-        </nav>
+        <a href="{{ '/work/' | relative_url }}">
+          Work
+        </a>
 
-      </div>
+        <a href="{{ '/research/' | relative_url }}">
+          Research
+        </a>
+
+        <a href="{{ '/policy/' | relative_url }}">
+          Policy
+        </a>
+
+        <a href="{{ '/education/' | relative_url }}">
+          Education
+        </a>
+
+        <a href="{{ '/projects/' | relative_url }}">
+          Projects
+        </a>
+
+        <a href="{{ '/writing/' | relative_url }}">
+          Writing
+        </a>
+
+        <a href="{{ '/speaking/' | relative_url }}">
+          Speaking
+        </a>
+
+        <a href="{{ '/media/' | relative_url }}">
+          Media
+        </a>
+
+      </nav>
+
+
+      <nav
+        class="mobile-menu__secondary"
+        aria-label="Secondary mobile navigation"
+      >
+
+        <a href="{{ '/press/' | relative_url }}">
+          Press
+        </a>
+
+        <a href="{{ '/archive/' | relative_url }}">
+          Archive
+        </a>
+
+        <a href="{{ '/timeline/' | relative_url }}">
+          Timeline
+        </a>
+
+        <a href="{{ '/tinker/' | relative_url }}">
+          Tinker With Me
+        </a>
+
+        <a href="{{ '/contact/' | relative_url }}">
+          Contact
+        </a>
+
+      </nav>
+
 
     </div>
 
-  </header>
+  </aside>
 
 
   <!-- =====================================================
@@ -182,6 +229,7 @@
   <footer class="site-footer">
 
     <div class="site-footer__main">
+
 
       <div>
 
@@ -221,6 +269,7 @@
 
       </div>
 
+
     </div>
 
 
@@ -231,9 +280,11 @@
       </span>
 
       <div>
+
         <a href="https://github.com/riabahadur">
           GitHub
         </a>
+
       </div>
 
     </div>
@@ -241,7 +292,11 @@
   </footer>
 
 
-  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+  <script
+    src="{{ '/assets/js/main.js' | relative_url }}"
+  ></script>
+
 
 </body>
+
 </html>
