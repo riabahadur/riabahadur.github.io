@@ -6,14 +6,33 @@ document.addEventListener("DOMContentLoaded", function () {
   const mobileMenu =
     document.getElementById("mobileMenu");
 
+  const menuSymbol =
+    menuButton
+      ? menuButton.querySelector(
+          ".mobile-menu-button__symbol"
+        )
+      : null;
+
+
   if (!menuButton || !mobileMenu) {
     return;
   }
 
 
+  function menuIsOpen() {
+
+    return document.body.classList.contains(
+      "mobile-menu-open"
+    );
+
+  }
+
+
   function openMenu() {
 
-    document.body.classList.add("mobile-menu-open");
+    document.body.classList.add(
+      "mobile-menu-open"
+    );
 
     menuButton.setAttribute(
       "aria-expanded",
@@ -25,13 +44,8 @@ document.addEventListener("DOMContentLoaded", function () {
       "false"
     );
 
-    const symbol =
-      menuButton.querySelector(
-        ".mobile-menu-button__symbol"
-      );
-
-    if (symbol) {
-      symbol.textContent = "−";
+    if (menuSymbol) {
+      menuSymbol.textContent = "−";
     }
 
   }
@@ -53,13 +67,8 @@ document.addEventListener("DOMContentLoaded", function () {
       "true"
     );
 
-    const symbol =
-      menuButton.querySelector(
-        ".mobile-menu-button__symbol"
-      );
-
-    if (symbol) {
-      symbol.textContent = "+";
+    if (menuSymbol) {
+      menuSymbol.textContent = "+";
     }
 
   }
@@ -67,14 +76,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function toggleMenu() {
 
-    const isOpen =
-      document.body.classList.contains(
-        "mobile-menu-open"
-      );
-
-    if (isOpen) {
+    if (menuIsOpen()) {
       closeMenu();
-    } else {
+    }
+
+    else {
       openMenu();
     }
 
@@ -103,8 +109,15 @@ document.addEventListener("DOMContentLoaded", function () {
     "keydown",
     function (event) {
 
-      if (event.key === "Escape") {
+      if (
+        event.key === "Escape" &&
+        menuIsOpen()
+      ) {
+
         closeMenu();
+
+        menuButton.focus();
+
       }
 
     }
@@ -115,8 +128,13 @@ document.addEventListener("DOMContentLoaded", function () {
     "resize",
     function () {
 
-      if (window.innerWidth > 980) {
+      if (
+        window.innerWidth > 980 &&
+        menuIsOpen()
+      ) {
+
         closeMenu();
+
       }
 
     }
