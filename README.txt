@@ -1,35 +1,26 @@
-RIA BAHADUR — SPEAKING + MEDIA UPDATE
+RIA BAHADUR — SITE-WIDE EDITORIAL CLEANUP
 =========================================
 
-This pack adds/replaces:
+Audited the 18 substantive HTML pages in the current build snapshot.
 
-- speaking/index.html
+Replacements in this pack:
 - media/index.html
+- speaking/index.html
+- writing/index.html
+- writing/tasting-rituals-of-trust/index.html
+- education/sexual-violence-sex-trafficking/index.html
+- education/washington-sane-guide/index.html
+- policy/index.html
+- policy/mission-5355/index.html
 
-No CSS change is required.
+Editorial rule now enforced:
+Public copy describes the work, the question, the result, the institution, or
+the current status of the work. It does NOT explain our website strategy,
+content taxonomy, proof architecture, migration plan, editorial rationale,
+future page plans, or why a claim is being categorized a certain way.
 
-Architecture:
-- Speaking = things Ria said, presented, testified, synthesized, or asked.
-- Media = outside coverage, interviews, official releases, institutional profiles.
-- News coverage is distinguished from government records.
-- First-person OSPI writing is identified as first-person, not third-party reporting.
-- Sciences Po is labeled FORTHCOMING, not published.
-- Older debate/speech work is acknowledged but routed toward Archive.
-- STS Forum visual material is described as the next ingestion step rather than
-  pretending media assets have already been migrated.
-
-Selected external records linked:
-- FOX 13 interview
-- KING 5 coverage/interview
-- TVW legislative hearing
-- KOIN coverage
-- NonStop Local / NBC Right Now
-- The Center Square
-- Washington Senate Democrats official releases
-- Washington OSPI first-person article
-- Eastside Preparatory School profile
-- Willows Preparatory School alumni profile
-- North Dakota published testimony
+Status terms remain only when they describe the work itself (for example:
+enacted, introduced, forthcoming, in development, or in adaptation).
 
 Suggested commit:
-Build Speaking and Media public record
+Remove internal editorial thinking from public copy
