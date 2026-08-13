@@ -1,22 +1,35 @@
-RIA BAHADUR — WRITING UPDATE
-================================
+RIA BAHADUR — SPEAKING + MEDIA UPDATE
+=========================================
 
 This pack adds/replaces:
 
-- writing/index.html
-- writing/ignore-the-fool/index.html
-- writing/tasting-rituals-of-trust/index.html
+- speaking/index.html
+- media/index.html
 
 No CSS change is required.
 
-Status architecture:
-- Conference/institutional works are identified by their actual form.
-- Honors thesis is marked IN PROGRESS.
-- Academic papers are not called publications unless published.
-- Public-facing pieces still in development are labeled accordingly.
-- Intended outlets are intentionally NOT named on the public page.
-- The Sciences Po interview belongs on Media, not Writing.
-- Educational resources and legislation remain in their own documentary sections.
+Architecture:
+- Speaking = things Ria said, presented, testified, synthesized, or asked.
+- Media = outside coverage, interviews, official releases, institutional profiles.
+- News coverage is distinguished from government records.
+- First-person OSPI writing is identified as first-person, not third-party reporting.
+- Sciences Po is labeled FORTHCOMING, not published.
+- Older debate/speech work is acknowledged but routed toward Archive.
+- STS Forum visual material is described as the next ingestion step rather than
+  pretending media assets have already been migrated.
+
+Selected external records linked:
+- FOX 13 interview
+- KING 5 coverage/interview
+- TVW legislative hearing
+- KOIN coverage
+- NonStop Local / NBC Right Now
+- The Center Square
+- Washington Senate Democrats official releases
+- Washington OSPI first-person article
+- Eastside Preparatory School profile
+- Willows Preparatory School alumni profile
+- North Dakota published testimony
 
 Suggested commit:
-Build Writing and publication-status architecture
+Build Speaking and Media public record
