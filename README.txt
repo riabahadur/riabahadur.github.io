@@ -78,3 +78,42 @@ IP RULE REMAINS
 
 Suggested commit:
 Uplevel site around preemption and public evidence
+
+
+CORRECTED INTERNATIONAL POLICY RECORD
+-------------------------------------
+Brunei Darussalam:
+- Correct source is the Ministry of Education, Brunei Darussalam.
+- A May 4, 2023 Google result/screenshot preserves the now-offline Ministry
+  page featuring Ria Bahadur and her trafficking-prevention work.
+- DO NOT attribute this item to the Indian High Commission or India's MEA.
+
+Denmark:
+- 2026 correspondence from Mischa Andersen, Committee Secretary for the
+  Children and Education Committee of the Danish Parliament, invited Ria to
+  send Mission 5355 materials for distribution to committee members.
+- The Secretariat also asked whether the material could be made publicly
+  available on the Danish Parliament website (ft.dk).
+- Ria is working to complete that public-information/distribution step before
+  any formal legislative initiative.
+- Do not describe this as introduced or enacted Danish legislation.
+
+United Kingdom:
+- Ria corresponded extensively with Dame Diana Johnson's office about SB 5355.
+- Chloe Simms, writing on behalf of Dame Diana Johnson, forwarded Ria's
+  briefing/background to:
+    * MP Tonia Antoniazzi
+    * Kat Banyard at UK Feminista
+- Public wording: further discussion / developing UK pathway.
+- Do not imply sponsorship, introduction, or enactment yet.
+- User's private strategic goal is to secure a UK legislative outcome by the
+  end of 2027; do NOT publish the target date unless the user explicitly asks.
+
+PRIVACY
+- The supplied Denmark/UK email screenshots are provenance/evidence only.
+- DO NOT place private correspondence screenshots in the public GitHub repo.
+- Preserve the facts in public prose; keep source screenshots in the private
+  evidence archive.
+
+Suggested commit:
+Correct and expand Mission 5355 international policy record
