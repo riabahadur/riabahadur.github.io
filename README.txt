@@ -1,19 +1,21 @@
-RIA BAHADUR — PROJECTS UPDATE
+RIA BAHADUR — TIMELINE UPDATE
 =============================
 
 Adds/replaces:
-- projects/index.html
+- timeline/index.html
 
-Public-safe projects:
-1. Dolby Laboratories / Stanford MS&E 284 academic client project.
-2. Haymaker / Stanford MS&E 184 academic client project.
-3. Stealth dual-use venture — title and broad category only.
+Design principle:
+- Selective chronology, not a CV rendered by year.
+- Starts with the scientific/research trajectory and follows the movement into
+  prevention, law, research security, wargaming, science diplomacy, and building.
+- Earlier speech, classical arts, and community work route to Archive.
 
-IP boundary:
-- Dolby/Haymaker use only information already prepared for public CV/LinkedIn presentation.
-- Stealth company architecture, models, product mechanics, customers, and launch-ready
-  description are deliberately withheld.
-- Do not activate the company name or detailed launch language until the venture is public.
+IP/privacy:
+- Current Honors thesis remains title/status only.
+- NATO operational details remain excluded.
+- STS forthcoming publication substance remains excluded.
+- Mission 5355 international entries use only the public-safe Denmark/UK status
+  established in the current site baseline.
 
 Suggested commit:
-Build public-safe Projects page
+Build documentary career timeline
