@@ -1,24 +1,34 @@
-RIA BAHADUR — PRESS + CONTACT UPDATE
-====================================
+RIA BAHADUR — SPAM-SAFE PRESS + CONTACT CORRECTION
+==================================================
 
-Adds/replaces:
+This pack REPLACES the earlier Press + Contact pack.
+
+Files:
+- _config.yml
 - press/index.html
 - contact/index.html
 
-No CSS change required.
+Privacy rule:
+- No destination email appears in visible text.
+- No destination email appears in HTML source.
+- No mailto link exposes the destination address.
+- The form posts to a relay endpoint stored as a site configuration value.
 
-Public contact:
-- riab@stanford.edu
-- https://www.linkedin.com/in/riabahadur/
-- https://github.com/riabahadur
+Activation:
+1. Create a Formspree form whose notification recipient is Ria's private/public-facing email.
+2. Copy the ID-based endpoint, which looks like:
+   https://formspree.io/f/FORM_ID
+3. Put that endpoint into `contact_form_endpoint` in `_config.yml`.
+4. In Formspree settings:
+   - keep CAPTCHA protection enabled;
+   - restrict submissions to the live site domain;
+   - optionally configure the site's own thank-you redirect.
+5. The form already includes Formspree's `_gotcha` honeypot field.
 
-Privacy / IP:
-- No phone number.
-- No private master CV download.
-- No unpublished research substance.
-- No operational NATO details.
-- Headshots are request-only until approved public images are supplied.
-- Add preferred phonetic pronunciation once Ria confirms it.
+Until `contact_form_endpoint` is configured, the page shows LinkedIn as the fallback.
+
+IMPORTANT:
+Do not put the recipient email itself anywhere in the public repository.
 
 Suggested commit:
-Build Press and Contact conversion pages
+Remove public email and secure contact routing

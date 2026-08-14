@@ -1,17 +1,17 @@
 title: "Ria Bahadur"
 description: "Researcher, legislative author, and founder working across science, security, law, technology, and public institutions."
-
 url: "https://riabahadur.github.io"
 baseurl: ""
-
 author:
   name: "Ria Bahadur"
-
 lang: "en-US"
-
 markdown: kramdown
-
 permalink: pretty
+
+# Secure contact form relay.
+# Keep empty until a Formspree form ID is created.
+# The public site never contains the destination email address.
+contact_form_endpoint: ""
 
 exclude:
   - README.md
