@@ -1,43 +1,30 @@
-RIA BAHADUR — SEARCH-PRESERVING ARCHIVE UPDATE
-================================================
+RIA BAHADUR — TINKER WITH ME UPDATE
+===================================
 
 Adds/replaces:
-- archive/index.html
-- archive/debate/index.html
-- archive/music/index.html
-- archive/kathak/index.html
-- archive/poetry/index.html
-- archive/community/index.html
+- tinker/index.html
 
-WHY THE DEEP PAGES EXIST
-The legacy riabahadur.com site currently has Google-visible/indexed pages for
-Debate, Hindustani Music, Kathak, Poetry, and IACS. These subjects therefore
-receive dedicated successor URLs rather than being collapsed into one generic
-Archive page.
+ROLE OF THIS PAGE
+- Public workbench, not a second Projects page.
+- Points to released code/resources and public builds.
+- Establishes GitHub as the source/code layer of the personal site.
+- Current live items:
+  1. riabahadur.github.io source repository
+  2. OER Commons curriculum
+  3. public-safe Dolby/Haymaker applied-AI project summaries
 
-PLANNED LEGACY URL MAP AT DOMAIN CUTOVER
-- /home/debate           -> /archive/debate/
-- /home/music-hindustani -> /archive/music/
-- /home/dance-kathak     -> /archive/kathak/
-- /home/poetry           -> /archive/poetry/
-- /home/iacs             -> /archive/community/
-- /home/research         -> /research/
-- /home/governmentpolicy -> /policy/
-- /home                  -> /
-- /home/fun              -> /about/  [review before cutover]
+INTENTIONALLY NOT INCLUDED
+- Stealth company name, architecture, methods, models, or customers.
+- Unreleased wargaming tooling.
+- Unreleased platform concepts unless and until Ria explicitly makes them public.
+- Unreleased hardware/OS experiments until there is a real public build or repository.
+- Private prototypes or internal code.
 
-IMPORTANT:
-Do not rely on client-side/meta-refresh redirects as the final migration plan if
-a true HTTP 301/308 redirect layer can be configured. At final cutover, choose
-a redirect mechanism compatible with GitHub Pages/custom-domain hosting and test
-every legacy path individually.
-
-SEO CONTENT PRESERVATION
-- Deep-page titles/descriptions retain the legacy subject vocabulary.
-- Material is updated for accuracy rather than copied blindly from the older site.
-- Public historical substance is retained where useful.
-- Unpublished poetry/manuscripts are not exposed merely to preserve old page length.
-- Early neuroscience remains under /research/ rather than being duplicated in Archive.
+READY WHEN
+- New public repository → add a live-build card.
+- Public demo → add direct demo link.
+- A hardware/OS experiment becomes a real public build → add it here.
+- Venture launches → decide whether it belongs here, Projects, or both.
 
 Suggested commit:
-Build search-preserving legacy archive
+Build public Tinker With Me workbench
