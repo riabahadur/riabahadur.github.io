@@ -1,21 +1,43 @@
-RIA BAHADUR — TIMELINE UPDATE
-=============================
+RIA BAHADUR — SEARCH-PRESERVING ARCHIVE UPDATE
+================================================
 
 Adds/replaces:
-- timeline/index.html
+- archive/index.html
+- archive/debate/index.html
+- archive/music/index.html
+- archive/kathak/index.html
+- archive/poetry/index.html
+- archive/community/index.html
 
-Design principle:
-- Selective chronology, not a CV rendered by year.
-- Starts with the scientific/research trajectory and follows the movement into
-  prevention, law, research security, wargaming, science diplomacy, and building.
-- Earlier speech, classical arts, and community work route to Archive.
+WHY THE DEEP PAGES EXIST
+The legacy riabahadur.com site currently has Google-visible/indexed pages for
+Debate, Hindustani Music, Kathak, Poetry, and IACS. These subjects therefore
+receive dedicated successor URLs rather than being collapsed into one generic
+Archive page.
 
-IP/privacy:
-- Current Honors thesis remains title/status only.
-- NATO operational details remain excluded.
-- STS forthcoming publication substance remains excluded.
-- Mission 5355 international entries use only the public-safe Denmark/UK status
-  established in the current site baseline.
+PLANNED LEGACY URL MAP AT DOMAIN CUTOVER
+- /home/debate           -> /archive/debate/
+- /home/music-hindustani -> /archive/music/
+- /home/dance-kathak     -> /archive/kathak/
+- /home/poetry           -> /archive/poetry/
+- /home/iacs             -> /archive/community/
+- /home/research         -> /research/
+- /home/governmentpolicy -> /policy/
+- /home                  -> /
+- /home/fun              -> /about/  [review before cutover]
+
+IMPORTANT:
+Do not rely on client-side/meta-refresh redirects as the final migration plan if
+a true HTTP 301/308 redirect layer can be configured. At final cutover, choose
+a redirect mechanism compatible with GitHub Pages/custom-domain hosting and test
+every legacy path individually.
+
+SEO CONTENT PRESERVATION
+- Deep-page titles/descriptions retain the legacy subject vocabulary.
+- Material is updated for accuracy rather than copied blindly from the older site.
+- Public historical substance is retained where useful.
+- Unpublished poetry/manuscripts are not exposed merely to preserve old page length.
+- Early neuroscience remains under /research/ rather than being duplicated in Archive.
 
 Suggested commit:
-Build documentary career timeline
+Build search-preserving legacy archive
