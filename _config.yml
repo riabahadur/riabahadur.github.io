@@ -9,9 +9,10 @@ markdown: kramdown
 permalink: pretty
 
 # Secure contact form relay.
-# Keep empty until a Formspree form ID is created.
-# The public site never contains the destination email address.
-contact_form_endpoint: ""
+# The destination email and CAPTCHA secret remain server-side and never appear
+# in this repository.
+contact_form_endpoint: "https://formspree.io/f/xkjwvbdy"
+turnstile_site_key: "0x4AAAAAAERJlYnJZqJ0Qqyi"
 
 exclude:
   - README.md

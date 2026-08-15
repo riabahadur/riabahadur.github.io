@@ -1,30 +1,40 @@
-RIA BAHADUR — TINKER WITH ME UPDATE
-===================================
+RIA BAHADUR — FORMSPREE + TURNSTILE ACTIVATION
+==============================================
 
-Adds/replaces:
-- tinker/index.html
+Complete replacement files:
+- _config.yml
+- contact/index.html
 
-ROLE OF THIS PAGE
-- Public workbench, not a second Projects page.
-- Points to released code/resources and public builds.
-- Establishes GitHub as the source/code layer of the personal site.
-- Current live items:
-  1. riabahadur.github.io source repository
-  2. OER Commons curriculum
-  3. public-safe Dolby/Haymaker applied-AI project summaries
+Configured public values:
+- Formspree endpoint: https://formspree.io/f/xkjwvbdy
+- Cloudflare Turnstile Site Key: 0x4AAAAAAERJlYnJZqJ0Qqyi
 
-INTENTIONALLY NOT INCLUDED
-- Stealth company name, architecture, methods, models, or customers.
-- Unreleased wargaming tooling.
-- Unreleased platform concepts unless and until Ria explicitly makes them public.
-- Unreleased hardware/OS experiments until there is a real public build or repository.
-- Private prototypes or internal code.
+NOT INCLUDED:
+- destination email address
+- Cloudflare Turnstile Secret Key
+- any API key or private credential
 
-READY WHEN
-- New public repository → add a live-build card.
-- Public demo → add direct demo link.
-- A hardware/OS experiment becomes a real public build → add it here.
-- Venture launches → decide whether it belongs here, Projects, or both.
+Before testing:
+1. In Formspree CAPTCHA settings:
+   - CAPTCHA status ON
+   - solution Turnstile
+   - paste the Cloudflare Turnstile SECRET KEY there
+   - Save
+2. In Formspree, restrict the form to:
+   riabahadur.github.io
+   (add/switch to riabahadur.com at domain cutover)
+3. In Cloudflare Turnstile, ensure the widget hostnames include:
+   riabahadur.github.io
+   riabahadur.com
+4. Upload this pack to the repo root and push.
+5. Open /contact/ over HTTPS and submit one real test message.
+
+Implementation:
+- Formspree recipient remains server-side.
+- Turnstile secret remains server-side at Formspree.
+- Turnstile site key is public by design.
+- Turnstile uses responsive/flexible sizing and only appears when interaction is needed.
+- Existing _gotcha honeypot remains active.
 
 Suggested commit:
-Build public Tinker With Me workbench
+Activate secure Formspree contact form

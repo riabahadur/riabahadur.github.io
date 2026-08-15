@@ -41,6 +41,10 @@ description: "Secure contact form for media, speaking, research, Mission 5355, a
     min-height: 180px;
     resize: vertical;
   }
+  .contact-form__captcha {
+    margin: .25rem 0 1.25rem;
+    max-width: 100%;
+  }
   .contact-form__privacy {
     margin-top: 1rem;
     font-size: .92rem;
@@ -78,7 +82,8 @@ description: "Secure contact form for media, speaking, research, Mission 5355, a
     </h2>
 
     {% assign contact_endpoint = site.contact_form_endpoint | strip %}
-    {% if contact_endpoint != "" %}
+    {% assign turnstile_key = site.turnstile_site_key | strip %}
+    {% if contact_endpoint != "" and turnstile_key != "" %}
 
     <form class="contact-form" action="{{ contact_endpoint }}" method="POST">
       <div class="contact-form__trap" aria-hidden="true">
@@ -121,6 +126,16 @@ description: "Secure contact form for media, speaking, research, Mission 5355, a
         </div>
       </div>
 
+      <div class="contact-form__captcha">
+        <div
+          class="cf-turnstile"
+          data-sitekey="{{ turnstile_key }}"
+          data-size="flexible"
+          data-theme="auto"
+          data-appearance="interaction-only">
+        </div>
+      </div>
+
       <button class="button button--dark" type="submit">Send inquiry</button>
 
       <p class="contact-form__privacy">
@@ -128,6 +143,12 @@ description: "Secure contact form for media, speaking, research, Mission 5355, a
         address is not published in the page source.
       </p>
     </form>
+
+    <script
+      src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+      async
+      defer>
+    </script>
 
     {% else %}
 
