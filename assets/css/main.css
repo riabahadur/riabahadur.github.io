@@ -1250,3 +1250,261 @@ p {
     animation-iteration-count: 1 !important;
   }
 }
+
+
+/* =========================================================
+   FINAL VISUAL / EVIDENCE LAYER
+   ========================================================= */
+
+.hero--visual .hero__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, .85fr);
+  gap: clamp(2.5rem, 7vw, 6rem);
+  align-items: center;
+}
+
+.hero__portrait {
+  margin: 0;
+  align-self: stretch;
+}
+
+.hero__portrait img {
+  width: 100%;
+  height: 100%;
+  min-height: 520px;
+  max-height: 680px;
+  object-fit: cover;
+  object-position: center 35%;
+  display: block;
+  border-radius: 2px;
+}
+
+.hero__portrait figcaption {
+  margin-top: .7rem;
+  font-size: .74rem;
+  line-height: 1.45;
+  color: rgba(255,255,255,.62);
+}
+
+.impact-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0,1fr));
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.impact-stat {
+  padding: 2rem 1.5rem;
+  border-right: 1px solid var(--line);
+}
+
+.impact-stat:last-child {
+  border-right: 0;
+}
+
+.impact-stat__value {
+  display: block;
+  font-family: var(--serif);
+  font-size: clamp(2rem,4vw,3.35rem);
+  line-height: 1;
+  margin-bottom: .65rem;
+  color: var(--navy);
+}
+
+.impact-stat__label {
+  display: block;
+  font-size: .84rem;
+  line-height: 1.45;
+  color: var(--ink-soft);
+}
+
+.media-feature {
+  display: grid;
+  grid-template-columns: minmax(260px,.8fr) minmax(0,1.2fr);
+  gap: clamp(2rem,5vw,5rem);
+  align-items: center;
+}
+
+.media-feature__image {
+  margin: 0;
+}
+
+.media-feature__image img {
+  width: 100%;
+  display: block;
+  border-radius: 2px;
+}
+
+.media-feature__image figcaption,
+.photo-card figcaption {
+  margin-top: .65rem;
+  font-size: .78rem;
+  line-height: 1.45;
+  color: var(--ink-soft);
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.photo-card {
+  margin: 0;
+}
+
+.photo-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  border-radius: 2px;
+}
+
+.photo-card--portrait img {
+  aspect-ratio: 4 / 5;
+}
+
+.photo-card--wide {
+  grid-column: span 2;
+}
+
+.photo-card--wide img {
+  aspect-ratio: 16 / 9;
+}
+
+.evidence-links {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.evidence-link {
+  display: block;
+  padding: 1.35rem 1.4rem;
+  border: 1px solid var(--line);
+  text-decoration: none;
+  color: inherit;
+  transition: transform .18s ease, border-color .18s ease;
+}
+
+.evidence-link:hover {
+  transform: translateY(-2px);
+  border-color: var(--ink-soft);
+}
+
+.evidence-link strong {
+  display: block;
+  margin-bottom: .35rem;
+  color: var(--navy);
+}
+
+.evidence-link span {
+  display: block;
+  font-size: .85rem;
+  line-height: 1.45;
+  color: var(--ink-soft);
+}
+
+.recognition-grid {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.recognition-item {
+  padding: 1.6rem;
+  border-top: 1px solid currentColor;
+}
+
+.recognition-item__year {
+  display: block;
+  margin-bottom: .65rem;
+  font-size: .72rem;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+  opacity: .65;
+}
+
+.recognition-item h3 {
+  margin: 0 0 .65rem;
+  font-size: 1.25rem;
+}
+
+.recognition-item p {
+  margin: 0;
+  font-size: .92rem;
+  line-height: 1.55;
+  opacity: .8;
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .85rem 1.2rem;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .hero--visual .hero__grid,
+  .media-feature {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__portrait img {
+    min-height: 0;
+    max-height: none;
+    aspect-ratio: 4 / 3;
+  }
+
+  .impact-strip {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+
+  .impact-stat:nth-child(2) {
+    border-right: 0;
+  }
+
+  .impact-stat:nth-child(-n+2) {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .photo-grid {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+
+  .photo-card--wide {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .impact-strip,
+  .photo-grid,
+  .evidence-links,
+  .recognition-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .impact-stat {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .impact-stat:last-child {
+    border-bottom: 0;
+  }
+
+  .photo-card--wide {
+    grid-column: span 1;
+  }
+
+  .photo-card--wide img,
+  .photo-card img {
+    aspect-ratio: 4 / 3;
+  }
+}
